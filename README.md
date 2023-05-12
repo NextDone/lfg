@@ -40,37 +40,37 @@ Folders inside `_goals` may further define subgoals, or files.  Since goals are 
 
 In an LFG file or line of goal syntax like `;Physiological>Hydration>Drink Water...`, braces (`{}`) can be added to include further task details and data in Markdown (Extended Syntax). These details can be stored in various data formats, such as JSON, YAML, XML, TOML, CSV, and INI, using the following code blocks:
 
-````markdown
-```json
-```yaml 
-```xml
-```toml
-```csv
-```ini
+````
+   ```json
+   ```yaml
+   ```xml
+   ```toml
+   ```csv
+   ```ini
 ````
 
 
-````markdown
-```lfg
-;Physiological>Hydration>Drink Water...{
-   #Why I should drink water_
-   - Because the AI came up with this goal for me
-   - Because we're made of water
+````
+   ```lfg
+   ;Physiological>Hydration>Drink Water...{
+      #Why I should drink water_
+      - Because the AI came up with this goal for me
+      - Because we're made of water
 
-   #When I should drink water
-   `0 */2 * * *`
+      #When I should drink water
+      `0 */2 * * *`
 
-   #how I should drink water
+      #how I should drink water
+      ```
+         tip, tip, tip,
+      ```
+
+     ```json {
+     "duration": "4 seconds",
+     "supplies": "Water bottle"
+     }```
+   }
    ```
-      tip, tip, tip,
-   ```
-
-  ```json {
-  "duration": "4 seconds",
-  "supplies": "Water bottle"
-  }```
-}
-```
 ````
 
 ### 2.6 Collaboration and Version Control
