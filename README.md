@@ -12,6 +12,9 @@ The Language for Goals (LFG) is a syntax designed to efficiently represent goals
 - `[~]` - Create a task in progress
 - `;A quick todo` - Create a quick task, where category (none/current) and [ ] are implicit
 
+Tasks can be created with varying levels of detail, from simple one-line tasks to more complex tasks with nested subtasks, priorities, deadlines, tags, and notes.
+
+
 ### 2.3 Task Priorities
 - `$$$` - High priority
 - `$$` - Medium priority
@@ -23,6 +26,9 @@ The Language for Goals (LFG) is a syntax designed to efficiently represent goals
 ### 2.5 Task Categories and Nesting
 - `;Category>Sub>Sub` - Create categories and subcategories (preferably themselves actually worded as Goals/Large tasks) using greater-than symbols for namespacing
 - `>` - Use a greater-than symbol to create nested tasks and subtasks within categories, following the same namespacing pattern
+- `;>` - Shorthand for adding a task nested into the category above, without repeating the full category path
+-  Tasks can be written with or without categories and nesting, allowing for a flexible structure that suits the user's needs. Partially categorized tasks, as well as tasks without any categories, are also valid. When categories are omitted within a block of tasks that have categories, the LFG syntax will automatically infer the categories from the surrounding tasks.
+
 
 ### 2.6 Task Notes
 - `{Note}` - Add a note to a task using braces; supports Markdown formatting inside braces
@@ -95,6 +101,15 @@ This integration with PRs and MRs will help make the LFG syntax even more useful
 
 ```
 
+;Buy groceries
+;Walk the dog
+;Call Luna
+
+;Family>Adventure Weekend>Plan itinerary
+;Family>Adventure Weekend>Plan itinerary>Research attractions #gpt
+;> Book moon tickets
+;> [x] Book accommodations (2023-05-20) $$
+
 ;Tasks>Project>Design
 
 [ ] Complete the LFG proposal (2023-05-13) $$$ #proposal
@@ -110,7 +125,7 @@ This integration with PRs and MRs will help make the LFG syntax even more useful
 
 ```
 
-## 7. Next ;>
+## 7. Next
 
 This section outlines potential enhancements and future directions for the LFG syntax, aiming to further improve its capabilities for managing goals and tasks.
 
@@ -128,6 +143,6 @@ This section outlines potential enhancements and future directions for the LFG s
 
 ∞. **Custom task attributes**: Allow users to define custom attributes for tasks, which could be used to store additional information or customize the task representation and sorting/filtering. Preferably, store these attributes inside existing `{notes}` in JSON format, at the end for extensibility.  Any and every one of the above could be implemented, or anything in the future could be implemented right now this way.
 
-∞+1. **Recommended best practices for external tools**: Encourage the development of best practices for integrating the LFG syntax with other productivity tools and platforms, such as calendars, project management tools, and communication apps. This will ensure seamless interoperability and enhance the overall usefulness of the LFG syntax.
+∞+1. **Recommended best practices for external tools**: Encourage the development of best practices for integrating the LFG syntax with other productivity tools and platforms, such as calendars, project management tools, and communication apps. This will ensure seamless interoperability and enhance the overall usefulness of the LFG syntax.  Include rules/algo for infering categories when ommitted.  
 
 By exploring these enhancements, the LFG syntax can continue to evolve and better serve the needs of users in managing their goals and tasks effectively.
