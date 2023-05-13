@@ -109,8 +109,24 @@ This integration with PRs and MRs will help make the LFG syntax even more useful
 
 ```
 
-## 7. Conclusion
+## 7. Next ;>
 
-The LFG syntax provides an efficient and human-readable way to represent and manage goals and tasks. By leveraging git, directory structures, and various data formats, users can collaborate and share goals, making the LFG syntax a powerful tool for personal and professional productivity.
+This section outlines potential enhancements and future directions for the LFG syntax, aiming to further improve its capabilities for managing goals and tasks.
 
-This document serves as an RFC-style description of the LFG syntax, covering its essential features and functionality. Further development and refinement of the syntax will be guided by user feedback and real-world application.
+1. **Recurring tasks**: Introduce support for defining recurring tasks, with options for specifying frequency (e.g., daily, weekly, monthly) and other relevant parameters (e.g., weekdays only).
+
+2. **Task dependencies**: Allow users to specify relationships between tasks (other than hierarchical), such as one task being dependent on the completion of another task.
+
+3. **Time tracking**: Add support for tracking the time spent on tasks, allowing users to log and analyze the time spent on different tasks or categories.
+
+4. **Progress tracking**: For tasks that can be broken down into smaller steps or have a measurable progress (e.g., percentage), consider adding support for tracking and displaying progress.
+
+5. **Task delegation**: Add features to assign tasks to team members or collaborators, using the `@` symbol to designate assignees (e.g., `@username`).
+
+6. **Reminders and notifications**: Allow users to set reminders and notifications for tasks, with options for customizing the type and frequency of notifications.
+
+∞. **Custom task attributes**: Allow users to define custom attributes for tasks, which could be used to store additional information or customize the task representation and sorting/filtering. Preferably, store these attributes inside existing `{notes}` in JSON format, at the end for extensibility.  Any and every one of the above could be implemented, or anything in the future could be implemented right now this way.
+
+∞+1. **Recommended best practices for external tools**: Encourage the development of best practices for integrating the LFG syntax with other productivity tools and platforms, such as calendars, project management tools, and communication apps. This will ensure seamless interoperability and enhance the overall usefulness of the LFG syntax.
+
+By exploring these enhancements, the LFG syntax can continue to evolve and better serve the needs of users in managing their goals and tasks effectively.
