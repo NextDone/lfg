@@ -10,6 +10,7 @@ The Language for Goals (LFG) is a syntax designed to efficiently represent goals
 - `[ ]` - Create an empty task
 - `[x]` - Create a completed task
 - `[~]` - Create a task in progress
+- `;A quick todo` - Create a quick task, where category (none/current) and [ ] are implicit
 
 ### 2.3 Task Priorities
 - `$$$` - High priority
