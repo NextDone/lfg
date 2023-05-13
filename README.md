@@ -31,13 +31,13 @@ The Language for Goals (LFG) is a syntax designed to efficiently represent goals
 
 ## 3. Directory Structure and File Types
 
-The root folder for goals is named `_goals`. Within this folder, `.lfg` and `.md` files with recognizable single-line code containing the LFG syntax or code blocks with ```lfg blocks can be used to store goals and tasks.
+The root folder for goals is named `_goals`. Within this folder, `.lfg` and `.md` files with recognizable single-line code containing the LFG syntax or code blocks with ` ```lfg ` blocks can be used to store goals and tasks.
 
 Folders inside `_goals` may further define subgoals or files. Since goals are more like namespaces (with `>` used as a delimiter) than folders, they can appear in any file in the structure. A file can contain one or more goals.
 
 ## 4. Notes, Task Details, and Extended Data
 
-In an LFG file or line of goal syntax like `;Physiological>Hydration> [~] Drink Water`, braces (`{}`) can be added to include further {notes} or task details and data in Markdown (Extended Syntax). These details can be stored in various data formats, such as JSON, YAML, XML, TOML, CSV, and INI, using the following code blocks:
+In an LFG file or line of goal syntax like `;Physiological>Hydration> [~] Drink Water`, braces (`{}`) can be added to include further `{notes}` or task details and data in Markdown (Extended Syntax). These details can be stored in various data formats, such as JSON, YAML, XML, TOML, CSV, and INI, using the following code blocks:
 
 ````
    ```json
